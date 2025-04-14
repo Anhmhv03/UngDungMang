@@ -7,14 +7,10 @@ const logs = [
   "2024-04-01T15:00:00Z",
   "2024-04-02T08:00:00Z",
 ];
-const count = (logs) => {
-  return logs.reduce((acc, log) => {
-    const date = log.slice(0, 10);
 
-    acc[date] = (acc[date] || 0) + 1;
-
-    return acc;
-  }, {});
-};
-const result = count(logs);
-console.log(result);
+const tinhSoLuongTruyCap = logs.reduce((acc, log) => {
+  const date = log.slice(0, 10);
+  acc[date] = (acc[date] || 0) + 1;
+  return acc;
+}, {});
+console.log(tinhSoLuongTruyCap);

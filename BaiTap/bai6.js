@@ -16,5 +16,6 @@ const frequency = clicks.reduce((acc, click) => {
 
 const sorted = Object.entries(frequency).sort((a, b) => b[1] - a[1]);
 const top3 = sorted.slice(0, 3).map(([productId]) => productId);
-
+console.log(frequency);
+console.log(sorted);
 console.log(top3);
